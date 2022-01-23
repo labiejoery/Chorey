@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="clickListener"
+            type="com.example.chorey.ui.home.HomeAdapter.TaakClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/TaakImage"
+            android:layout_width="125dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:maxWidth="300dp"
+            android:maxHeight="350dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+        <TextView
+            android:id="@+id/TaakTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/TaakDescription"
+            app:layout_constraintEnd_toEndOf="@+id/TaakDescription"
+            app:layout_constraintStart_toEndOf="@+id/TaakImage"
+            app:layout_constraintTop_toTopOf="@+id/TaakImage" />
+
+        <TextView
+            android:id="@+id/TaakCoinAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="50"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/TaakCoinImage"
+            app:layout_constraintStart_toStartOf="@+id/TaakCoinImage"
+            app:layout_constraintTop_toBottomOf="@+id/TaakCoinImage" />
+
+        <ImageView
+            android:id="@+id/TaakCoinImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/coinexample"
+            tools:layout_editor_absoluteY="27dp" />
+
+        <TextView
+            android:id="@+id/TaakDescription"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/TaakCoinImage"
+            app:layout_constraintStart_toEndOf="@+id/TaakImage"
+            app:layout_constraintTop_toBottomOf="@+id/TaakTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
